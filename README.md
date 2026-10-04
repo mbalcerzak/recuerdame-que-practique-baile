@@ -1,4 +1,4 @@
-# Recuérdame que practique baile
+# Recuérdame que practiquemos baile
 
 *Remember to dance.*
 
