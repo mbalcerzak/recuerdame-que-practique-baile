@@ -23,7 +23,8 @@ You built this for yourself. Let the music find you.
 1. Install dependencies:
 
    ```bash
-   brew install yt-dlp mpv
+   brew install yt-dlp
+   brew install mpv   # optional; macOS can use built-in afplay instead
    ```
 
 2. Install the daily launch agent:
@@ -33,10 +34,11 @@ You built this for yourself. Let the music find you.
    ./scripts/install_launch_agent.sh
    ```
 
-3. Test immediately (plays 3 songs):
+3. Test immediately (plays 3 songs; use `--songs 1` for a quick check):
 
    ```bash
    python3 scripts/play_salsa.py
+   python3 scripts/play_salsa.py --songs 1
    ```
 
 ## How it works

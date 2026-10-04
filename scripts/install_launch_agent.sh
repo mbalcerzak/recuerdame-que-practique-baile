@@ -13,12 +13,14 @@ if [[ -z "$PYTHON" ]]; then
   exit 1
 fi
 
-for cmd in yt-dlp mpv; do
-  if ! command -v "$cmd" >/dev/null 2>&1; then
-    echo "Missing $cmd. Install with: brew install yt-dlp mpv" >&2
-    exit 1
-  fi
-done
+if ! command -v yt-dlp >/dev/null 2>&1; then
+  echo "Missing yt-dlp. Install with: brew install yt-dlp" >&2
+  exit 1
+fi
+if ! command -v mpv >/dev/null 2>&1 && ! command -v afplay >/dev/null 2>&1; then
+  echo "Need mpv (brew install mpv) or macOS afplay for playback." >&2
+  exit 1
+fi
 
 mkdir -p "$LOG_DIR"
 chmod +x "$ROOT/scripts/play_salsa.py" "$ROOT/scripts/daily_scheduler.py"
