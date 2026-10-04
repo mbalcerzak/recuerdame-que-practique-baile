@@ -53,6 +53,6 @@ Logs: `~/Library/Logs/recuerdame-salsa/salsa-practice.log`
 - **Spotify** was skipped on purpose: it needs a developer app, OAuth, Premium, and an active Spotify device. YouTube + yt-dlp is much simpler for local playback.
 - Uninstall: `./scripts/uninstall_launch_agent.sh`
 
-## Why not Spotify?
+## Why Youtube?
 
 The Spotify Web API can start playback only on an active Premium account with a connected device. For a small local reminder, YouTube search + mpv is the path of least resistance.
